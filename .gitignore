@@ -1,0 +1,79 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv/
+
+# Environment variables
+.env
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local data & downloads
+data/downloads/
+data/approvals/*.tmp
+*.log
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db# Next.js
+.next/
+out/
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Local databases
+data/*.db
+data/*.sqlite
+data/*.sqlite3
+data/test_tmp/
+
+# Downloads and storage
+downloads/
+storage/
+
+# Node
+node_modules/
+
+# Build files
+dist/
+build/
+coverage/
+# Local application data
+data/
+scratch/
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# Frontend build files
+.next/
+node_modules/
+
+# Python environment and cache
+venv/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
