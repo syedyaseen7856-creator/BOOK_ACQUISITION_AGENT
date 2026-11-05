@@ -216,3 +216,133 @@ http://127.0.0.1:8000
 
 5. **Audit History**:
    - Click the **Audit History** button in the header at any time to open the audit drawer and inspect all approved records and their snapshot hashes.
+## 🚀 Installation and Setup Guide
+
+Follow these steps to download, configure, and run the Book Acquisition Agent locally.
+
+### 1. Prerequisites
+
+Install the following tools before starting:
+
+- Python 3.11 or later
+- Node.js 20 or later
+- npm
+- Git
+- Visual Studio Code (recommended)
+
+### 2. Clone the Repository
+
+Open your terminal and run:
+
+```bash
+git clone https://github.com/syedyaseen7856-creator/BOOK_ACQUISITION_AGENT.git
+cd BOOK_ACQUISITION_AGENT
+```
+
+### 3. Backend Setup (FastAPI)
+
+Open a terminal in the project root directory.
+
+**Create a Python virtual environment:**
+
+```bash
+python -m venv venv
+```
+
+**Activate the virtual environment:**
+
+Windows PowerShell:
+
+```powershell
+.\venv\Scripts\Activate.ps1
+```
+
+Windows CMD:
+
+```cmd
+venv\Scripts\activate
+```
+
+**Install Python dependencies:**
+
+```bash
+pip install -r requirements.txt
+```
+
+**Configure environment variables:**
+
+Create a `.env` file using the provided example:
+
+```powershell
+Copy-Item .env.example .env
+```
+
+Open `.env` and configure the required API keys and settings. Add your own Gemini API key if required by your configuration.
+
+**Start the backend server:**
+
+```bash
+python -m uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
+```
+
+Backend URL: http://127.0.0.1:8000
+
+API documentation: http://127.0.0.1:8000/docs
+
+Health check: http://127.0.0.1:8000/api/health
+
+### 4. Frontend Setup (Next.js)
+
+Open a **second terminal** and navigate to the frontend directory:
+
+```bash
+cd frontend
+```
+
+**Install frontend dependencies:**
+
+```bash
+npm install
+```
+
+**Start the frontend development server:**
+
+```bash
+npm run dev
+```
+
+Frontend URL: http://localhost:3000
+
+Open the frontend URL in your browser to access the application.
+
+### 5. Running the Complete Application
+
+You must keep both terminals running:
+
+| Component | Command | URL |
+|---|---|---|
+| Backend | `python -m uvicorn app.main:app --reload --host 127.0.0.1 --port 8000` | http://127.0.0.1:8000 |
+| Frontend | `npm run dev` | http://localhost:3000 |
+
+### 6. How to Use the Application
+
+1. Open the application in your browser.
+2. Upload your college or university syllabus.
+3. Allow the system to extract subjects and prescribed books.
+4. Select a subject to explore its recommended and reference books.
+5. Discover book information from supported sources.
+6. View book details and access available reading or preview options.
+7. Download books where authorized by the source's access and licensing conditions.
+8. Explore your download library and acquisition history.
+
+### 7. Important Notes
+
+- Never upload your `.env` file or expose API keys publicly.
+- Use `.env.example` as a configuration reference.
+- The application may require API keys for certain external services.
+- Book downloads depend on the availability and licensing conditions of the source.
+- Keep both backend and frontend servers running while using the application.
+
+---
+
+**Repository:** [BOOK_ACQUISITION_AGENT](https://github.com/syedyaseen7856-creator/BOOK_ACQUISITION_AGENT)
